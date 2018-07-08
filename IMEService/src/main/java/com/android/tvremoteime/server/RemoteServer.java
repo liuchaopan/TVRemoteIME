@@ -129,15 +129,6 @@ public class RemoteServer extends NanoHTTPD
     }
 
     private void addGetRequestProcessers(){
-        this.getRequestProcessers.add(new RawRequestProcesser(this.mContext, "/index.html", R.raw.index, NanoHTTPD.MIME_HTML));
-        this.getRequestProcessers.add(new RawRequestProcesser(this.mContext, "/style.css", R.raw.style, "text/css"));
-        this.getRequestProcessers.add(new RawRequestProcesser(this.mContext, "/jquery_min.js", R.raw.jquery_min, "application/x-javascript"));
-        this.getRequestProcessers.add(new RawRequestProcesser(this.mContext, "/ime_core.js", R.raw.ime_core, "application/x-javascript"));
-        this.getRequestProcessers.add(new RawRequestProcesser(this.mContext, "/keys.png", R.raw.keys, "image/png"));
-        this.getRequestProcessers.add(new RawRequestProcesser(this.mContext, "/ic_dl_folder.png", R.raw.ic_dl_folder, "image/png"));
-        this.getRequestProcessers.add(new RawRequestProcesser(this.mContext, "/ic_dl_other.png", R.raw.ic_dl_other, "image/png"));
-        this.getRequestProcessers.add(new RawRequestProcesser(this.mContext, "/ic_dl_video.png", R.raw.ic_dl_video, "image/png"));
-        this.getRequestProcessers.add(new RawRequestProcesser(this.mContext, "/favicon.ico", R.drawable.ic_launcher, "image/x-icon"));
         this.getRequestProcessers.add(new FileRequestProcesser(this.mContext));
         this.getRequestProcessers.add(new AppIconRequestProcesser(this.mContext));
         this.getRequestProcessers.add(new TVRequestProcesser(this.mContext));

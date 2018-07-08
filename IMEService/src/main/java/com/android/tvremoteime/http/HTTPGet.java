@@ -1,10 +1,10 @@
 package com.android.tvremoteime.http;
 
+import android.database.CharArrayBuffer;
 import android.util.Log;
 
 import com.android.tvremoteime.Environment;
 
-import org.apache.http.util.CharArrayBuffer;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -43,7 +43,6 @@ public class HTTPGet {
 
                     int l;
                     while ((l = reader.read(tmp)) != -1) {
-                        buffer.append(tmp, 0, l);
                     }
                     return buffer.toString();
                 }finally {

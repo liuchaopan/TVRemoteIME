@@ -19,8 +19,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
-import android.support.annotation.RequiresApi;
-import android.support.v4.os.AsyncTaskCompat;
 import android.text.TextUtils;
 import android.view.Window;
 
@@ -122,7 +120,6 @@ public class ScreenShotActivity extends Activity {
                                 @Override
                                 public void run() {
                                     Image image = mImageReader.acquireLatestImage();
-                                    AsyncTaskCompat.executeParallel(new ScreenShotSaveTask(), image);
                                 }
                             },
                 300);
